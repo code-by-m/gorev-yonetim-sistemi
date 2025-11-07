@@ -153,8 +153,8 @@ require_once 'includes/header.php';
         <h3 class="text-high-contrast fw-bold mb-0">
             <i class="bi bi-clipboard-check"></i> Görev Listesi
         </h3>
-        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
-            data-bs-target="            <i class=" bi bi-plus-circle"></i> Yeni Görev Ekle
+        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+            <i class="bi bi-plus-circle"></i> Yeni Görev Ekle
         </button>
     </div>
 
@@ -358,5 +358,6 @@ require_once 'includes/header.php';
         </div>
     </div>
 </div>
+
 
 <?php require_once 'includes/footer.php'; ?>
