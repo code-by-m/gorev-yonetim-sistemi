@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://www.instagram.com/codebym_" target="_blank">
+    <img src="https://img.shields.io/badge/Built%20by-Codebym-00bcd4?style=for-the-badge" alt="Built by Codebym">
+  </a>
+</p>
+
 # 🧭 Task Management System (Görev Yönetim Sistemi)
 
 A modern PHP-based web application that allows users to create, update, complete, and delete personal tasks.  
@@ -5,7 +11,7 @@ This project demonstrates secure CRUD operations, user authentication, and respo
 
 ---
 
-## 🌐 English Version
+## <img src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" width="20"/> English Version  
 
 ### 🎯 Overview
 **Task Management System** is a fully functional web application built with **PHP**, **MySQL**, and **Bootstrap 5**, allowing users to manage their own tasks with authentication and user-specific data handling.
@@ -104,19 +110,26 @@ CREATE TABLE tasks (
 
 ---
 
-### 👨‍💻 Developer
-**CodeByM**  
-📧 your.email@example.com  
-🌐 [github.com/code-by-m](https://github.com/code-by-m)
-
----
-
 ### 📜 License
-This project is licensed under the [MIT License](LICENSE).
+
+[MIT License © 2025](LICENSE) — [CodeByM](https://github.com/code-by-m)  
+
+This project is licensed under the MIT License and is developed exclusively under the **CodeByM** brand.  
+Removing or altering the “Design by CodeByM” signature is **not recommended**.  
+Maintaining this attribution helps preserve the identity and consistency of the CodeByM brand.
 
 ---
 
-## 🇹🇷 Türkçe Versiyon
+### 📣 Contact
+
+📩 Instagram: [@codebym_](https://www.instagram.com/codebym_)  
+🌐 GitHub: [code-by-m](https://github.com/code-by-m)  
+💼 LinkedIn: [Mehmet Kara](https://www.linkedin.com/in/mehmetkara-dv)
+
+---
+
+## <img src="https://twemoji.maxcdn.com/v/latest/svg/1f1f9-1f1f7.svg" width="20"/> Türkçe Versiyon
+
 
 ### 🎯 Genel Bakış
 **Görev Yönetim Sistemi**, kullanıcıların görevlerini oluşturabileceği, düzenleyebileceği, tamamlayabileceği ve silebileceği PHP tabanlı bir web uygulamasıdır.  
@@ -145,13 +158,60 @@ Kullanıcı bazlı oturum yönetimi, güvenli CRUD işlemleri ve modern Bootstra
 | **CSS** | Tasarım ve animasyonlar |
 
 ---
+### 📁 Klasör Yapısı
+```
+gorev-yonetim-sistemi/
+│
+gorev-yonetim-sistemi/
+├── assets/
+│   ├── css/style.css          # Modern CSS tasarımı (gradientler, bulanıklık efekti, duyarlı yapı)
+│   ├── js/script.js           # Arayüz etkileşimleri, form doğrulama işlemleri
+│   └── img/icon.png           # Uygulama logosu
+│
+├── auth/
+│   ├── login.php              # Kullanıcı girişi
+│   ├── register.php           # Kullanıcı kaydı (şifreler hashlenmiş)
+│   ├── logout.php             # Kullanıcı çıkışı
+│   └── db.php                 # Veritabanı bağlantısı (MySQLi, utf8mb4 karakter seti)
+│
+├── tasks/
+│   ├── create.php             # Yeni görev ekleme
+│   ├── complete.php           # Görevi tamamlandı olarak işaretleme
+│   └── delete.php             # Görev silme işlemi
+│
+├── includes/
+│   ├── header.php             # Navigasyon çubuğu, Bootstrap bağlantıları
+│   └── footer.php             # Alt bilgi ve JS dosyaları dahil etme
+│
+├── index.php                  # Ana sayfa – tüm görevleri listeleme / kontrol paneli
+├── login.php                  # Giriş formu
+├── register.php               # Kayıt formu
+└──  database.sql               # SQL şeması (kullanıcılar ve görevler tabloları)
+
+```
+
+---
 
 ### 🗄️ Veritabanı Şeması
-**users** ve **tasks** tabloları ile ilişkisel yapı:  
-- `users.id` → `tasks.user_id` foreign key bağlantısı  
-- Otomatik zaman damgaları (`created_at`)  
-- Unique email/username kısıtlamaları  
+```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
+CREATE TABLE tasks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  is_completed BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
 ---
 
 ### 🚀 Kurulum
@@ -169,12 +229,24 @@ Kullanıcı bazlı oturum yönetimi, güvenli CRUD işlemleri ve modern Bootstra
 
 ---
 
-### 👨‍💻 Geliştirici
-**CodeByM**  
-📧 your.email@example.com  
-🌐 [github.com/code-by-m](https://github.com/code-by-m)
+### 📜 Lisans
+
+[MIT Lisansı © 2025](LICENSE) — [CodeByM](https://github.com/code-by-m)  
+
+Bu proje **CodeByM markası** altında geliştirilmiş olup MIT Lisansı ile lisanslanmıştır.  
+“Design by CodeByM” ibaresinin kaldırılması veya değiştirilmesi **önerilmez**.  
+Bu ibarenin korunması, markanın kimliğini ve tutarlılığını sürdürmeye yardımcı olur.
 
 ---
 
-### 📜 Lisans
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+### 📣 İletişim
+
+📩 Instagram: [@codebym_](https://www.instagram.com/codebym_)  
+🌐 GitHub: [code-by-m](https://github.com/code-by-m)  
+💼 LinkedIn: [Mehmet Kara](https://www.linkedin.com/in/mehmetkara-dv)
+
+---
+
+<p align="center">
+  Designed & Built by <strong><a href="https://www.instagram.com/codebym_" target="_blank">Codebym</a></strong>
+</p>
