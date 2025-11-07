@@ -1,0 +1,180 @@
+# 🧭 Task Management System (Görev Yönetim Sistemi)
+
+A modern PHP-based web application that allows users to create, update, complete, and delete personal tasks.  
+This project demonstrates secure CRUD operations, user authentication, and responsive UI using Bootstrap 5.
+
+---
+
+## 🌐 English Version
+
+### 🎯 Overview
+**Task Management System** is a fully functional web application built with **PHP**, **MySQL**, and **Bootstrap 5**, allowing users to manage their own tasks with authentication and user-specific data handling.
+
+### ⚙️ Key Features
+✅ User authentication (register, login, logout)  
+✅ Secure password hashing (bcrypt)  
+✅ SQL injection protection (prepared statements)  
+✅ CRUD operations for personal tasks  
+✅ Responsive UI with modern gradient design  
+✅ Statistics dashboard (total, completed, pending)  
+✅ Modal-based task creation and editing  
+✅ Client-side and server-side validation  
+✅ XSS protection via `htmlspecialchars`
+
+### 🧱 Technologies Used
+| Technology | Purpose |
+|-------------|----------|
+| **PHP** | Backend logic & authentication |
+| **MySQL** | Database for users & tasks |
+| **HTML5 / Bootstrap 5** | Responsive front-end design |
+| **JavaScript** | UI interactions & validation |
+| **CSS (Glassmorphism)** | Modern styling & animations |
+
+---
+
+### 📁 Folder Structure
+```
+gorev-yonetim-sistemi/
+│
+├── assets/
+│   ├── css/style.css        # Modern CSS design (gradients, blur, responsive)
+│   ├── js/script.js         # UI interactions, form validation
+│   └── img/icon.png         # App logo
+│
+├── auth/
+│   ├── login.php            # Login logic with sessions
+│   ├── register.php         # User registration (hashed passwords)
+│   └── logout.php           # Session destroy & redirect
+│
+├── config/
+│   └── db.php               # Database connection (MySQLi, utf8mb4)
+│
+├── tasks/
+│   ├── create.php           # Add new tasks
+│   ├── update.php           # Mark as completed / edit
+│   └── delete.php           # Delete tasks securely
+│
+├── includes/
+│   ├── header.php           # Navigation bar, Bootstrap links
+│   └── footer.php           # Footer and JS includes
+│
+├── index.php                # Main task list / dashboard
+├── login_form.php           # Login page (modern gradient form)
+├── register_form.php        # Register page
+└── database.sql             # SQL schema (users & tasks tables)
+```
+
+---
+
+### 🗄️ Database Schema
+```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tasks (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  is_completed BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
+
+---
+
+### 🚀 Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/code-by-m/gorev-yonetim-sistemi.git
+   ```
+2. Import `database.sql` into your MySQL (phpMyAdmin or CLI)
+3. Update your database credentials inside `config/db.php`
+4. Start your local server (XAMPP, Laragon, etc.)
+5. Open:
+   ```
+   http://localhost/gorev-yonetim-sistemi
+   ```
+
+---
+
+### 👨‍💻 Developer
+**CodeByM**  
+📧 your.email@example.com  
+🌐 [github.com/code-by-m](https://github.com/code-by-m)
+
+---
+
+### 📜 License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🇹🇷 Türkçe Versiyon
+
+### 🎯 Genel Bakış
+**Görev Yönetim Sistemi**, kullanıcıların görevlerini oluşturabileceği, düzenleyebileceği, tamamlayabileceği ve silebileceği PHP tabanlı bir web uygulamasıdır.  
+Kullanıcı bazlı oturum yönetimi, güvenli CRUD işlemleri ve modern Bootstrap 5 tasarımı içerir.
+
+### ⚙️ Temel Özellikler
+✅ Kullanıcı kayıt & giriş sistemi (PHP Sessions)  
+✅ Şifre hashleme (bcrypt)  
+✅ SQL Injection koruması (prepared statements)  
+✅ XSS koruması (`htmlspecialchars`)  
+✅ Görev ekleme, düzenleme, silme  
+✅ Tamamlanan görevleri işaretleme  
+✅ Duyarlı (responsive) tasarım  
+✅ Modern gradient ve glassmorphism arayüz  
+✅ İstatistik kartları ve filtreleme özellikleri  
+
+---
+
+### 🧱 Kullanılan Teknolojiler
+| Teknoloji | Kullanım Alanı |
+|------------|----------------|
+| **PHP** | Sunucu tarafı işlemler |
+| **MySQL** | Veritabanı yönetimi |
+| **Bootstrap 5** | Arayüz tasarımı |
+| **JavaScript** | Etkileşimli öğeler |
+| **CSS** | Tasarım ve animasyonlar |
+
+---
+
+### 🗄️ Veritabanı Şeması
+**users** ve **tasks** tabloları ile ilişkisel yapı:  
+- `users.id` → `tasks.user_id` foreign key bağlantısı  
+- Otomatik zaman damgaları (`created_at`)  
+- Unique email/username kısıtlamaları  
+
+---
+
+### 🚀 Kurulum
+1. Reponun klonunu oluştur:
+   ```bash
+   git clone https://github.com/code-by-m/gorev-yonetim-sistemi.git
+   ```
+2. `database.sql` dosyasını MySQL’e aktar.  
+3. `config/db.php` içinde veritabanı bilgilerini düzenle.  
+4. Local sunucuyu çalıştır (XAMPP veya Laragon).  
+5. Tarayıcıda:
+   ```
+   http://localhost/gorev-yonetim-sistemi
+   ```
+
+---
+
+### 👨‍💻 Geliştirici
+**CodeByM**  
+📧 your.email@example.com  
+🌐 [github.com/code-by-m](https://github.com/code-by-m)
+
+---
+
+### 📜 Lisans
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
