@@ -247,6 +247,59 @@ Bu ibarenin korunması, markanın kimliğini ve tutarlılığını sürdürmeye 
 
 ---
 
+## 🖼️ Screenshots / Ekran Görüntüleri
+
+---
+
+### 🏠 Homepage  
+Landing screen shown to users before logging in.  
+Kullanıcıların giriş yapmadan önce gördüğü açılış ekranı.  
+![Homepage](https://github.com/code-by-m/gorev-yonetim-sistemi/blob/main/assets/img/pages/homepage.png?raw=true)
+
+---
+
+### 🔐 Login Page  
+Clean and minimal login screen with email and password fields.  
+Temiz ve sade giriş ekranı; email ve şifre alanları içerir.  
+![Login Page](https://github.com/code-by-m/gorev-yonetim-sistemi/blob/main/assets/img/pages/login.png?raw=true)
+
+---
+
+### 🧾 Register Page  
+Simple registration form with username, email, and password inputs.  
+Kullanıcı adı, email ve şifre alanlarına sahip basit kayıt formu.  
+![Register Page](https://github.com/code-by-m/gorev-yonetim-sistemi/blob/main/assets/img/pages/register.png?raw=true)
+
+---
+
+### 🧭 Task Dashboard  
+The main screen where users view their tasks, including statistics cards and filtering options.  
+Kullanıcının görevlerini görüntülediği ana ekran. İstatistik kartları ve filtreleme seçenekleri içerir.  
+![Dashboard](https://github.com/code-by-m/gorev-yonetim-sistemi/blob/main/assets/img/pages/dashboard.png?raw=true)
+
+---
+
+### ➕ Add Task Modal  
+Modal window for adding a new task with title and description fields.  
+Başlık ve açıklama alanlarıyla yeni görev ekleme penceresi.  
+![Add Task Modal](https://github.com/code-by-m/gorev-yonetim-sistemi/blob/main/assets/img/pages/add-task.png?raw=true)
+
+---
+
+### ✏️ Edit Task Modal  
+Modal window for editing an existing task.  
+Mevcut görevleri düzenlemek için kullanılan modal pencere.  
+![Edit Task Modal](https://github.com/code-by-m/gorev-yonetim-sistemi/blob/main/assets/img/pages/edit-task.png?raw=true)
+
+---
+
+### 📱 Mobile View  
+Responsive layout shown on mobile devices.  
+Mobil cihazlarda uygulamanın duyarlı (responsive) görünümü.  
+![Mobile View](https://github.com/code-by-m/gorev-yonetim-sistemi/blob/main/assets/img/pages/mobile-view-dashboard.png?raw=true)
+
+---
+
 <p align="center">
   Designed & Built by <strong><a href="https://www.instagram.com/codebym_" target="_blank">Codebym</a></strong>
 </p>
